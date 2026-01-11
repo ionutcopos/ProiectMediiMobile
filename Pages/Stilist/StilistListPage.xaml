@@ -1,0 +1,23 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiMobile.Pages.Stilist.StilistListPage"
+             Title="StilistListPage">
+    <StackLayout>
+        <!-- Define the CollectionView -->
+        <CollectionView x:Name="StilistCollectionView" SelectionMode="Single"
+                        SelectionChanged="OnStilistSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Label Text="{Binding Nume}" FontAttributes="Bold" />
+                        <Label Text="{Binding Pret, StringFormat='Pret: {0:F2}'}" />
+                        <Label Text="{Binding SalonID, StringFormat='Salon ID: {0}'}" />
+                        
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Add Stilist" Clicked="OnAddStilistClicked" />
+    </StackLayout>
+</ContentPage>

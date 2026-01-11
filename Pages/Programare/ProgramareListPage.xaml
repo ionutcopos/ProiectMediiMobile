@@ -1,0 +1,25 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiMobile.Pages.Programare.ProgramareListPage"
+             Title="ProgramareListPage">
+    <StackLayout>
+        <ListView x:Name="programareListView"
+                  ItemSelected="OnProgramareSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="5">
+                            <Label Text="{Binding Salon.Nume}" FontAttributes="Bold" />
+                            <Label Text="-" />
+                            <Label Text="{Binding Stilist.Nume}" />
+                            <Label Text="{Binding DataProgramarii, StringFormat=' {0:dd/MM/yyyy}'}" HorizontalOptions="EndAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <Button Text="Programare noua" Clicked="OnAddProgramareClicked" />
+    </StackLayout>
+</ContentPage>

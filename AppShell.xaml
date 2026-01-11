@@ -1,0 +1,14 @@
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:root="clr-namespace:ProiectMediiMobile"
+       xmlns:salon="clr-namespace:ProiectMediiMobile.Pages.Salon;assembly=ProiectMediiMobile"
+       x:Class="ProiectMediiMobile.AppShell">
+
+    <FlyoutItem Title="Home">
+        <ShellContent ContentTemplate="{DataTemplate root:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Salon">
+        <ShellContent ContentTemplate="{DataTemplate salon:SalonMainPage}" />
+    </FlyoutItem>
+</Shell>

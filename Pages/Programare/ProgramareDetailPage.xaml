@@ -1,0 +1,19 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiMobile.Pages.Programare.ProgramareDetailPage"
+             Title="ProgramareDetailPage">
+    <StackLayout Margin="20">
+
+        <Label Text="Numele Salonului: " FontAttributes="Bold" />
+        <Label Text="{Binding Salon.Nume}" />
+
+        <Label Text="Numele Stilistului: " FontAttributes="Bold" />
+        <Label Text="{Binding Stilist.Nume}" />
+
+        <Label Text="Data programarii: " FontAttributes="Bold" />
+        <Label Text="{Binding DataProgramarii}" />
+
+        <Button Text="Edit" Clicked="OnEditButtonClicked" />
+        <Button Text="Delete" Clicked="OnDeleteButtonClicked" />
+    </StackLayout>
+</ContentPage>

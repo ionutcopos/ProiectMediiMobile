@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiMobile.Pages.Salon.SalonEntryPage"
+             Title="SalonEntryPage">
+    <StackLayout>
+        <Entry x:Name="numeEntry" Placeholder="Nume" />
+        <Entry x:Name="orasEntry" Placeholder="Oras" />
+        <Entry x:Name="pretEntry" Placeholder="Pret" />
+        <Entry x:Name="categorieEntry" Placeholder="Categorie" />
+
+
+        <Button Text="Save" Clicked="OnSaveButtonClicked" />
+    </StackLayout>
+</ContentPage>
