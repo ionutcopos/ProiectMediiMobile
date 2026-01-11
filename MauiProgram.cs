@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using ProiectMediiMobile.Pages.Salon;   // ← crucial - add this!
 
 namespace ProiectMediiMobile
 {
@@ -16,8 +17,14 @@ namespace ProiectMediiMobile
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
+
+            // Register ViewModel (must exist!)
+            builder.Services.AddTransient<SalonViewModel>();
+
+            // Register Page → this helps Shell resolve it (even if DI for pages in ContentTemplate is limited)
+            builder.Services.AddTransient<SalonMainPage>();
 
             return builder.Build();
         }

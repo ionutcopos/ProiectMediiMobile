@@ -1,29 +1,25 @@
-using ProiectMediiMobile.Pages.Programare;
-using ProiectMediiMobile.Pages.Client;
-namespace ProiectMediiMobile.Pages.Salon;
-
-public partial class SalonMainPage : ContentPage
+﻿namespace ProiectMediiMobile.Pages.Salon
 {
-    public SalonMainPage(int loggedInUserId)
+    public partial class SalonMainPage : ContentPage
     {
-        InitializeComponent(); // Add 'this.' to clarify context
-    }
+        public SalonMainPage()
+        {
+            InitializeComponent();
+        }
 
-    //  redirect to ProgramariListPage
-    private async void OnViewProgramariClicked(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new ProgramareListPage());
-    }
+        private async void OnViewClientsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProiectMediiMobile.Pages.Client.ClientListPage());
+        }
 
-    //  redirect to ClientListPage
-    private async void OnViewClientsClicked(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new ClientListPage());
-    }
+        private async void OnViewSalonsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SalonListPage());
+        }
 
-    // redirect to SalonListPage
-    private async void OnViewSalonsClicked(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new SalonListPage());
+        private async void OnViewProgramariClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProiectMediiMobile.Pages.Programare.ProgramareListPage());
+        }
     }
 }

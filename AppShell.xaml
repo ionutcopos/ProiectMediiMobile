@@ -11,4 +11,5 @@
     <FlyoutItem Title="Salon">
         <ShellContent ContentTemplate="{DataTemplate salon:SalonMainPage}" />
     </FlyoutItem>
+
 </Shell>
